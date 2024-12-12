@@ -47,8 +47,9 @@ export default function TodoRow({ todo }: Props) {
     <div
       ref={rootRef}
       className={clsx(
-        "flex justify-between items-center gap-3 px-[60px] p-4 group relative border border-white",
-        isEditing && "border-rose-500"
+        "flex justify-between items-center gap-3 px-[60px] p-4 group relative border",
+        isEditing && "border-rose-500",
+        !isEditing && "border-white"
       )}
     >
       <button
