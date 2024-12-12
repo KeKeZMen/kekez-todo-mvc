@@ -14,19 +14,21 @@ export default function TodoRow({ todo }: Props) {
 
   const {
     isEditing,
+    todoTitle,
     onChangeTodoTitle,
     onDeleteClick,
     onEditClick,
     onEditDoubleClick,
     onEnterTodoTitle,
-    todoTitle,
     setIsEditing,
+    setTodoTitle,
   } = useHandleTodo(todo);
 
   useEffect(() => {
     const handleWindowClick = (e: MouseEvent) => {
       if (e.target instanceof Node && !rootRef.current?.contains(e.target)) {
         setIsEditing(false);
+        setTodoTitle(todo.title);
       }
     };
 

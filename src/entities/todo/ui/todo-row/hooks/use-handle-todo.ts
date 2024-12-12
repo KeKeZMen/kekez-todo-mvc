@@ -37,5 +37,6 @@ export default function useHandleTodo(todo: Todo) {
     onDeleteClick,
     onEnterTodoTitle,
     setIsEditing,
+    setTodoTitle,
   };
 }
